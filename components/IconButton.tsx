@@ -1,14 +1,17 @@
-import { View, Text, Pressable } from 'react-native'
-import React from 'react'
+import React, {ReactNode} from 'react'
+import { Pressable} from 'react-native'
 
-const IconButton = () => {
-  return (
-    <View>
-        <Pressable onPress={()=>console.log("Presionado")}>
-            <Text>I'm pressable!</Text>
+interface IconButtonProps {
+    icon: ReactNode;
+    onPress: () => void;
+} 
+
+const IconButton = ({icon, onPress}: IconButtonProps) => {
+    return (
+        <Pressable onPress={onPress}>
+            {icon}
         </Pressable>
-    </View>
-  )
+    )
 }
 
 export default IconButton
