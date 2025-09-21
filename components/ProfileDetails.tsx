@@ -1,8 +1,10 @@
-import { View, Text, Image, Alert, Linking} from 'react-native'
-import React from 'react'
-import Ionicons from '@expo/vector-icons/Ionicons'
-import {IconProps} from '@expo/vector-icons/build/createIconSet'
-import IconButton from '@/components/IconButton'
+import React from 'react';
+import { Image, Linking, Text, View } from 'react-native';
+
+import AntDesign from '@expo/vector-icons/AntDesign';
+import Ionicons from '@expo/vector-icons/Ionicons';
+
+import IconButton from '@/components/IconButton';
 
 const ProfileDetails = () => {
   return (
@@ -14,17 +16,28 @@ const ProfileDetails = () => {
 
         <Text className='text-2xl font-bold'>Rafael Bravo</Text>
         <Text className='text-xl text-gray-400 font-bold'>Ingeniero en proceso</Text>
-        <IconButton
+        <View className='flex-row gap-5'>
+          <IconButton
             icon={
             <Ionicons name="logo-instagram" size={24} color="black" />
             }
             onPress={abrirInstagram}
         />
+        <IconButton
+            icon={
+              <AntDesign name="github" size={24} color="black" />
+            }
+            onPress={abrirGithub}
+        />
+        </View>
     </View>
   )
 }
 const abrirInstagram = () => {
     Linking.openURL('https://www.instagram.com/rafa.brav__/');
+};
+const abrirGithub = () => {
+    Linking.openURL('https://github.com/RafaBravv');
 };
 
 export default ProfileDetails
