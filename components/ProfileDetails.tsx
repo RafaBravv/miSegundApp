@@ -4,7 +4,8 @@ import { Image, Linking, Text, View } from 'react-native';
 import AntDesign from '@expo/vector-icons/AntDesign';
 import Ionicons from '@expo/vector-icons/Ionicons';
 
-import IconButton from '@/components/IconButton';
+import IconButton from '@/components/ui/IconButton';
+import CustomText from './ui/CustomText';
 
 const ProfileDetails = () => {
   return (
@@ -14,8 +15,8 @@ const ProfileDetails = () => {
         source={require("@/assets/images/wall-e.png")}
       />
 
-        <Text className='text-2xl font-bold'>Rafael Bravo</Text>
-        <Text className='text-xl text-gray-400 font-bold'>Ingeniero en proceso</Text>
+      <CustomText value={'Rafael Bravo'} variant={'title'}/>
+      <CustomText value={'Ingeniero en proceso'} variant={'subtitle'}/>
         <IconButton iconName='logo-instagram'></IconButton>
         <IconButton iconName='logo-github'></IconButton>
 
