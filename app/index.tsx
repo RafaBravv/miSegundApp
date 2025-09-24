@@ -1,11 +1,13 @@
 import { Text, View } from "react-native";
 import ProfileDetails from "@/components/ProfileDetails";
+import ProfileInfo from "@/components/ProfileInfo";
 import "../global.css"
 
 export default function Index() {
   return (
-    <View className="flex-col bg-stone-200 w-screen-safe h-screen-safe justify-center items-center">
-      <ProfileDetails></ProfileDetails>
+    <View className="flex-1 bg-white justify-start items-center">
+      <ProfileDetails/>
+      <ProfileInfo/>
     </View>
   );
 }
