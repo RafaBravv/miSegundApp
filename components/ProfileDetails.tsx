@@ -16,8 +16,11 @@ const ProfileDetails = () => {
 
         <Text className='text-2xl font-bold'>Rafael Bravo</Text>
         <Text className='text-xl text-gray-400 font-bold'>Ingeniero en proceso</Text>
-        <View className='flex-row gap-5'>
-          <IconButton
+        <IconButton iconName='logo-instagram'></IconButton>
+        <IconButton iconName='logo-github'></IconButton>
+
+        {/* <View className='flex-row gap-5'>
+        <IconButton
             icon={
             <Ionicons name="logo-instagram" size={24} color="black" />
             }
@@ -29,7 +32,7 @@ const ProfileDetails = () => {
             }
             onPress={abrirGithub}
         />
-        </View>
+        </View> */}
     </View>
   )
 }
