@@ -1,10 +1,10 @@
 import { Text } from 'react-native'
 import React from 'react'
 
-interface CustomTextProps{
+interface CustomTextProps {
     value?: string;
-    variant?: "normal"|"subtitle"|"title";
-    color?:string;
+    variant?: "normal"|"subtitle"|"title"|"description";
+    color?: string;
 }
 
 const CustomText = ({value="hola", variant="normal", color}: CustomTextProps) => {
@@ -22,9 +22,11 @@ function selectVariant(variant: string){
         case "normal":
             return "text-black font-normal"
         case "subtitle":
-            return "text-gray-400 font-normal text-xl font-bold"
+            return "text-gray-400 font-bold text-xl"
         case "title":
             return "text-black font-bold text-2xl"
+        case "description":
+            return "text-gray-400 text-xs"
         default:
             return "text-black font-normal"
     }

@@ -2,7 +2,6 @@
 import React, {ReactNode} from 'react'
 import { Pressable} from 'react-native'
 import Ionicons from '@expo/vector-icons/Ionicons';
-import MaterialCommunityIcons from '@expo/vector-icons/MaterialCommunityIcons';
 
 //Intefaces
 interface IconButtonProps {
